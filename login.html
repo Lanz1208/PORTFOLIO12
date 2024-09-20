@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="form_col">
+            <div class="button_box">
+                <button class="btn btn1" id="login">Sign In</button>
+                <button class="btn btn2" id="register">Register</button>
+            </div>
+            <form action="php/login.php" method="post" class="form_box login_form">
+                <div class="title_form">
+                    <span>Sign In</span>
+                </div>
+                <div class="inputs_login">
+                    <div class="input_box">
+                        <input type="text" class="inputs input_field" placeholder="Username" id="Username" name="Username" required>
+                        <ion-icon name="person-outline" class="icon"></ion-icon>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" class="inputs input_field" oninput="changeIcon(this.value)" id="passwordLog" name="passwordLog" placeholder="Password" required>
+                        <ion-icon name="lock-closed-outline" id="log_icon" onclick="password_log()" class="icon"></ion-icon>
+                    </div>
+                    <div class="forgot_pass">
+                        <a href="#" >Forgot password?</a>
+                    </div>
+                    <div class="input_box">
+                        <button class="inputs submit_btn">
+                            <span>Sign In</span>
+                            <ion-icon name="arrow-forward-outline" class="icon"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="social_icon_box">
+                    <div class="social_box">
+                        <ion-icon name="logo-facebook" class="social_icon"></ion-icon>
+                    </div>
+                    <div class="social_box">
+                        <ion-icon name="logo-instagram" class="social_icon"></ion-icon>
+                    </div>
+                    <div class="social_box">
+                        <ion-icon name="logo-tiktok" class="social_icon"></ion-icon>
+                    </div>
+                    <div class="social_box">
+                        <ion-icon name="logo-google" class="social_icon"></ion-icon>
+                    </div>
+                </div>
+            </form>
+
+            <form action="php/register.php" method="post" class="form_box register_form">
+                <div class="title_form">
+                    <span>Register</span>
+                </div>
+                <div class="inputs_login">
+                    <div class="input_box">
+                        <input type="text" class="inputs input_field" placeholder="Username" id="Username" name="Username" required>
+                        <ion-icon name="person-outline" class="icon"></ion-icon>
+                    </div>
+                    <div class="input_box">
+                        <input type="email" class="inputs input_field" placeholder="Email" id="Email" name="Email" required>
+                        <ion-icon name="mail-outline" class="icon"></ion-icon>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" class="inputs input_field" oninput="changeIcon(this.value)"  id="passwordReg" name="passwordReg" placeholder="Password" required>
+                        <ion-icon name="lock-closed-outline" class="icon" id="reg_icon" onclick="password_reg()"></ion-icon>
+                    </div>
+                    <div class="remember_me">
+                        <input type="checkbox" id="checkbox">Remember Me
+                    </div>
+                    <div class="input_box">
+                        <button class="inputs submit_btn">
+                            <span>Register</span>
+                            <ion-icon name="arrow-forward-outline" class="icon"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="social_icon_box">
+                    <div class="social_box">
+                        <ion-icon name="logo-facebook" class="social_icon"></ion-icon>
+                    </div>
+                    <div class="social_box">
+                        <ion-icon name="logo-instagram" class="social_icon"></ion-icon>
+                    </div>
+                    <div class="social_box">
+                        <ion-icon name="logo-tiktok" class="social_icon"></ion-icon>
+                    </div>
+                    <div class="social_box">
+                        <ion-icon name="logo-google" class="social_icon"></ion-icon>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
